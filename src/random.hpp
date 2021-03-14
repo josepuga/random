@@ -24,7 +24,7 @@ SOFTWARE.
 
 #ifndef RANDOM_HPP
 #define RANDOM_HPP
-#define RANDOM_HPP_VERSION "1.0.0"
+#define RANDOM_HPP_VERSION "1.0.1"
 
 #include <type_traits>
 #include <limits>
@@ -97,6 +97,12 @@ static_assert( //"using = uniform_distribution" above, overwrites the use of thi
          * @return Random number.
          * */
         T Get() {return _Get(m_min, m_max);}
+
+        /**
+         * @brief Get the random engine. For use as param in std::suffle
+         * @return Random engine.
+         * */
+        inline std::mt19937 GetEngine() {return m_engine;}
 
     private:
         T _Get(const T min, const T max);

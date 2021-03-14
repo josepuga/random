@@ -1,5 +1,6 @@
 #include <iostream>
 #include <type_traits>
+#include <algorithm>
 #include "random.hpp"
 using namespace std;
 
@@ -27,5 +28,15 @@ int main() {
     cout << "* rFloat.SetRange(-1,1)..." << endl;
     rFloat.SetRange(-1, 1);
     cout << "rFloat.Get()                      = " << rFloat.Get() << endl;
+	
+	
+	//Shuffle Vector
+	vector<int> myVector = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+	std::shuffle(myVector.begin(), myVector.end(), rInt.GetEngine());
+
+    for (auto number : myVector) {
+        cout << number << ", ";
+    }
+    cout << endl;
     
 }
