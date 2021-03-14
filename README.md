@@ -14,7 +14,7 @@ Just another random number generator class for C++.
 
 - Just one header.
 - Easy to integrate in your code.
-- Each object has his own seed.
+- Each object has it own seed.
 - Supports any Integral of Floating point type.
 - Mersenne twister algorithm generator (much better than rand() C style).
 
